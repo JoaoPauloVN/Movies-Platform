@@ -28,9 +28,10 @@
             <div class="mt-12 flex flex-col text-base text-neutral-300">
                 <h2 class="text-sm text-neutral-500">Movies</h2>
 
-                <x-sidebar-item route="movies.popular" icon="fa-fire-flame-curved" title="Popular"></x-sidebar-item>
-
-                <x-sidebar-item route="movies.top_rated" icon="fa-star" title="Top Rated"></x-sidebar-item>
+                <x-sidebar-item route="movies.popular" icon="fa-solid fa-fire-flame-curved" title="Popular">
+                </x-sidebar-item>
+                <x-sidebar-item route="movies.top_rated" icon="fa-solid fa-star" title="Top Rated"></x-sidebar-item>
+                <x-sidebar-item route="movies.upcoming" icon="fa-regular fa-clock" title="Upcoming"></x-sidebar-item>
             </div>
 
             <div class="absolute bottom-6">

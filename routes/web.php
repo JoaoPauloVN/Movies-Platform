@@ -29,6 +29,8 @@ Route::middleware('auth')->group(function () {
     Route::get("/movies", [MovieController::class, "index"])->name("movies.index");
     Route::get("/movies/popular", [MovieController::class, "popular"])->name("movies.popular");
     Route::get("/movies/top-rated", [MovieController::class, "topRated"])->name("movies.top_rated");
+    Route::get("/movie/{movie}", [MovieController::class, "movie"])->name("movies.latest");
+    Route::get("/movies/upcoming", [MovieController::class, "upcoming"])->name("movies.upcoming");
 });
 
 require __DIR__.'/auth.php';
