@@ -17,9 +17,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-gray-100 font-sans antialiased dark:bg-main">
-    <div class="flex min-h-screen">
-        <div class="fixed h-screen w-[18rem] border-r border-neutral-900 p-10 py-8">
+<body class="bg-gray-100 font-sans antialiased dark:bg-gray-900">
+    <div class="main flex min-h-screen">
+        <div class="fixed h-full w-[18rem] border-r-2 border-black/25 p-10 py-8">
             <div class="mt-2 mr-20 flex items-center text-neutral-300">
                 <div class="mr-3 h-8 w-8 rounded-full bg-blue-500"></div>
                 LOGO
@@ -54,7 +54,7 @@
                     </a>
                 </div>
             </div>
-            <main class="mt-10 pb-5">
+            <main class="mt-10 pb-8">
                 {{ $slot }}
             </main>
         </div>
@@ -63,3 +63,21 @@
 </body>
 
 </html>
+
+<style>
+    html::-webkit-scrollbar {
+        width: 8px;
+        background: transparent;
+    }
+
+    /* Handle */
+    html::-webkit-scrollbar-thumb {
+        background: rgb(30, 30, 50);
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    html::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+</style>

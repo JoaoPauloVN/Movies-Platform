@@ -28,6 +28,6 @@ class playground extends Command
     public function handle()
     {
         $service = new MoviesService();
-        dd($service->movies()->popular());
+        dd($service->movies()->all());
     }
 }

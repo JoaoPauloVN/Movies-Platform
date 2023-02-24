@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Services\TheMovieDb\Entities;
 
+use Illuminate\Support\Collection;
+
 class Movie
 {
     public bool $adult;
@@ -28,6 +30,8 @@ class Movie
     public bool $video;
     public float $vote_average;
     public int $vote_count;
+    public ?Collection $recomendations;
+    public ?array $trailer;
 
     public function __construct(mixed $data)
     {

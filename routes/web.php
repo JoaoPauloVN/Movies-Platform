@@ -26,10 +26,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get("/movies", [MovieController::class, "index"])->name("movies.index");
-    Route::get("/movies/popular", [MovieController::class, "popular"])->name("movies.popular");
+    Route::get("/movies", [MovieController::class, "popular"])->name("movies.popular");
     Route::get("/movies/top-rated", [MovieController::class, "topRated"])->name("movies.top_rated");
-    Route::get("/movie/{movie}", [MovieController::class, "movie"])->name("movies.latest");
+    Route::get("/movie/{movie}", [MovieController::class, "movie"])->name("movie.show");
     Route::get("/movies/upcoming", [MovieController::class, "upcoming"])->name("movies.upcoming");
 });
 

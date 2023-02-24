@@ -3,8 +3,8 @@ namespace App\Http\Services\TheMovieDb\Endpoints;
 
 trait HasMovies
 {
-    public function movies(): Movies
+    public function movies(int $page = 1): Movies
     {
-        return new Movies();
+        return new Movies($page);
     }
 }
